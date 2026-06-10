@@ -50,9 +50,9 @@ During my exploratory analysis, I discovered several critical insights regarding
 * I found a strong direct link between a lack of **Sleep Hours** combined with high **Work/Study Hours** and the likelihood of experiencing Burnout.
 * High **Daily Screen Time** and **Social Media Usage** were prominently associated with Anxiety cases.
 
-[Insert Graph: Bar chart showing feature importance across the three models here]
-[Insert Graph: Correlation heatmap between Stress Level, Sleep Hours, and Burnout here]
-[Insert Graph: ROC Curves demonstrating the models' classification quality here]
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 ## Model Building & Feature Engineering
 For feature engineering, I encapsulated all transformations into a single `scikit-learn` Pipeline. I used `OrdinalEncoder` for ranked categories, `StandardScaler` to normalize scales, and `PowerTransformer` to correct skewness in numerical variables. 
@@ -67,6 +67,3 @@ I evaluated the optimized LightGBM models on the test set using F1-score, accura
 * The models proved highly effective at identifying "Yes" cases (individuals at risk). For instance, the Anxiety model correctly identified 165 out of 253 at-risk individuals, while the Burnout model correctly caught 173 out of 258 cases.
 * The ROC Curves for all three target variables remained solidly above the baseline, confirming that I successfully learned the underlying patterns distinguishing healthy states from mental health risks.
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
